@@ -1,0 +1,12 @@
+C:\CoreCenterRetail\【標準版】Branch2.2\Retail\Unisys\Sales\InputSalesSlip\Redmine8842.UnitTests\bin\Debug\Redmine8842.UnitTests.exe
+C:\CoreCenterRetail\【標準版】Branch2.2\Retail\Unisys\Sales\InputSalesSlip\Redmine8842.UnitTests\bin\Debug\Redmine8842.UnitTests.pdb
+C:\CoreCenterRetail\【標準版】Branch2.2\Retail\Unisys\Sales\InputSalesSlip\Redmine8842.UnitTests\obj\Debug\Redmine8842.UnitTests.csproj.AssemblyReference.cache
+C:\CoreCenterRetail\【標準版】Branch2.2\Retail\Unisys\Sales\InputSalesSlip\Redmine8842.UnitTests\obj\Debug\Redmine8842.UnitTests.csproj.CoreCompileInputs.cache
+C:\CoreCenterRetail\【標準版】Branch2.2\Retail\Unisys\Sales\InputSalesSlip\Redmine8842.UnitTests\obj\Debug\Redmine8842.UnitTests.exe
+C:\CoreCenterRetail\【標準版】Branch2.2\Retail\Unisys\Sales\InputSalesSlip\Redmine8842.UnitTests\obj\Debug\Redmine8842.UnitTests.pdb
+Y:\Profile\Desktop\Redmine8842\Redmine8842.UnitTests\bin\Debug\Redmine8842.UnitTests.exe
+Y:\Profile\Desktop\Redmine8842\Redmine8842.UnitTests\bin\Debug\Redmine8842.UnitTests.pdb
+Y:\Profile\Desktop\Redmine8842\Redmine8842.UnitTests\obj\Debug\Redmine8842.UnitTests.csproj.AssemblyReference.cache
+Y:\Profile\Desktop\Redmine8842\Redmine8842.UnitTests\obj\Debug\Redmine8842.UnitTests.csproj.CoreCompileInputs.cache
+Y:\Profile\Desktop\Redmine8842\Redmine8842.UnitTests\obj\Debug\Redmine8842.UnitTests.exe
+Y:\Profile\Desktop\Redmine8842\Redmine8842.UnitTests\obj\Debug\Redmine8842.UnitTests.pdb

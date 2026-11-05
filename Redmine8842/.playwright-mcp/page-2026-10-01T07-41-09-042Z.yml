@@ -1,0 +1,12 @@
+- generic [ref=f4e2]:
+  - generic [ref=f4e3]:
+    - separator [ref=f4e4]
+    - heading "不正な画面操作を行いました。画面を閉じて再度操作を行ってください。" [level=3] [ref=f4e6]
+    - separator [ref=f4e7]
+  - table [ref=f4e8]:
+    - rowgroup [ref=f4e9]:
+      - row [ref=f4e10]:
+        - cell [ref=f4e11]:
+          - list [ref=f4e12]:
+            - listitem [ref=f4e13]: ブラウザの戻るボタンによる操作はできません。画面内に配置されている「戻る」ボタンを利用してください。
+            - listitem [ref=f4e14]: URL指定による直接アクセスはできません。メニュー画面からアクセスしてください。

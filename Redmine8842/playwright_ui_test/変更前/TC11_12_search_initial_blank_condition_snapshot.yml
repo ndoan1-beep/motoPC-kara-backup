@@ -1,0 +1,92 @@
+- generic [ref=f1e2] [box=0,0,1440,588]:
+  - generic [ref=f1e8] [box=781,0,659,30]:
+    - button "閉じる" [ref=f1e10] [box=1350,4,80,18]
+    - link [ref=f1e12] [cursor=pointer] [box=1230,15,115,12]:
+      - /url: ../../../../Help/CC_R_SCR/SCRCSAR050215.htm
+      - img "PageHelp" [ref=f1e13] [box=1230,5,115,20]
+    - table [ref=f1e15] [box=1120,6,100,21]:
+      - rowgroup [ref=f1e16] [box=1120,6,99,21]:
+        - row [ref=f1e17] [box=1120,6,99,21]:
+          - cell "検索" [ref=f1e18] [box=1120,6,99,21]
+    - generic [ref=f1e19] [box=781,8,339,14]:
+      - generic [ref=f1e20] [box=1027,8,73,14]: "0003123490"
+      - generic [ref=f1e21] [box=914,8,88,14]: 株式会社ﾕﾆｼｽ
+      - generic [ref=f1e22] [box=786,8,103,14]: （株）ユニシス
+  - generic [ref=f1e23] [box=0,31,1440,533]:
+    - generic [ref=f1e24] [box=0,31,1440,18]:
+      - generic [ref=f1e25] [box=0,34,129,12]:
+        - text: 期間
+        - textbox [ref=f1e26] [box=35,31,88,18]: 2026/07/21
+      - generic [ref=f1e27] [box=129,34,111,12]:
+        - text: ～
+        - textbox [ref=f1e28] [box=152,31,88,18]: 2026/07/21
+    - table [ref=f1e31] [box=0,49,299,69]:
+      - rowgroup [ref=f1e32] [box=2,51,295,65]:
+        - row [ref=f1e33] [box=2,51,295,65]:
+          - cell "伝票種別・区分" [ref=f1e34] [box=2,51,91,65]
+          - cell [ref=f1e35] [box=95,51,202,65]:
+            - listbox [ref=f1e36] [box=96,52,200,63]:
+              - option "07：値下・売変伝票" [ref=f1e37] [box=97,52,183,15]
+              - option "08：廃棄・廃棄伝票" [ref=f1e38] [box=97,68,183,15]
+              - option "07：値上・売変伝票" [ref=f1e39] [box=97,83,183,15]
+    - table [ref=f1e42] [box=0,118,255,82]:
+      - rowgroup [ref=f1e43] [box=2,120,251,78]:
+        - row [ref=f1e44] [box=2,120,251,2]:
+          - cell [ref=f1e45] [box=2,120,125,2]
+          - cell [ref=f1e46] [box=129,120,125,2]
+        - row [ref=f1e47] [box=2,124,251,74]:
+          - cell [ref=f1e48] [box=2,124,251,74]:
+            - group "店舗指定" [ref=f1e50] [box=5,125,245,72]:
+              - generic [ref=f1e52] [box=8,138,239,56]:
+                - table [ref=f1e54] [box=8,138,239,28]:
+                  - rowgroup [ref=f1e55] [box=10,140,235,24]:
+                    - row [ref=f1e56] [box=10,140,235,2]
+                    - row "店舗（センター）コード 035 池袋店" [ref=f1e59] [box=10,144,235,20]
+                - table [ref=f1e67] [box=8,166,125,28]:
+                  - rowgroup [ref=f1e68] [box=10,168,121,24]:
+                    - row [ref=f1e69] [box=10,168,121,2]
+                    - row "部門コード" [ref=f1e72] [box=10,172,121,20]
+    - generic [ref=f1e78] [box=0,200,1440,18]:
+      - generic [ref=f1e79] [box=0,203,247,12]:
+        - text: 入力バッチ番号
+        - textbox [ref=f1e80] [box=95,200,146,18]
+      - generic [ref=f1e81] [box=247,203,203,12]:
+        - text: 入力媒体区分
+        - combobox [ref=f1e82] [box=330,201,120,15]:
+          - option "1:画面" [selected] [box=0,0,0,0]
+          - option "2:PDA" [box=0,0,0,0]
+          - option "3:バッチ" [box=0,0,0,0]
+    - table [ref=f1e84] [box=0,218,82,68]:
+      - rowgroup [ref=f1e85] [box=2,220,78,64]:
+        - row [ref=f1e86] [box=2,220,78,64]:
+          - cell [ref=f1e87] [box=2,220,2,64]
+          - cell "履歴表示" [ref=f1e88] [box=6,220,70,64]:
+            - table [ref=f1e90] [box=7,221,68,62]:
+              - rowgroup [ref=f1e91] [box=9,223,64,58]:
+                - row [ref=f1e92] [box=9,223,64,2]:
+                  - cell [ref=f1e93] [box=9,223,31,2]
+                  - cell [ref=f1e94] [box=42,223,31,2]
+                - row "履歴表示" [ref=f1e95] [box=9,227,64,54]:
+                  - cell "履歴表示" [ref=f1e96] [box=9,227,64,54]:
+                    - group "履歴表示" [ref=f1e98] [box=12,228,58,52]
+          - cell [ref=f1e108] [box=78,220,2,64]
+    - generic [ref=f1e109] [box=0,286,1440,18]:
+      - button "クリア:F3" [ref=f1e111] [box=1306,286,70,18]
+      - button "検索:F4" [ref=f1e113] [box=1382,286,58,18]
+  - table [ref=f1e114] [box=0,564,6,6]:
+    - rowgroup [ref=f1e115] [box=2,566,2,2]:
+      - row [ref=f1e116] [box=2,566,2,2]:
+        - cell [ref=f1e117] [box=2,566,2,2]
+  - table [box=0,570,100,0]
+  - generic [ref=f1e119] [box=0,570,1440,18]:
+    - generic [box=0,572,1440,0]:
+      - generic [ref=f1e120] [box=0,572,144,22]:
+        - button "Submit" [ref=f1e121] [cursor=pointer] [box=0,572,20,20]
+        - text: "551"
+        - button "Submit" [ref=f1e122] [cursor=pointer] [box=50,572,20,20]
+        - text: "678"
+      - generic [ref=f1e123] [box=144,572,1296,20]:
+        - link "未確認のアラート情報が551件存在します。" [ref=f1e125] [cursor=pointer] [box=148,576,234,12]:
+          - /url: javascript:__doPostBack('ctl00$CautionModalLinkButton','')
+        - link "未確認のお知らせ情報が678件存在します。" [ref=f1e127] [cursor=pointer] [box=396,576,234,12]:
+          - /url: javascript:__doPostBack('ctl00$InfoModalLinkButton','')

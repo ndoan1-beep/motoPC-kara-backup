@@ -1,0 +1,183 @@
+- generic [ref=f4e2]:
+  - generic [ref=f4e8]:
+    - button "閉じる" [ref=f4e10]
+    - link [ref=f4e12] [cursor=pointer]:
+      - /url: ../../../../Help/CC_R_SCR/SCRCSAR050202.htm
+      - img "PageHelp" [ref=f4e13]
+    - table [ref=f4e15]:
+      - rowgroup [ref=f4e16]:
+        - row [ref=f4e17]:
+          - cell "新規" [ref=f4e18]
+    - generic [ref=f4e19]:
+      - generic [ref=f4e20]: "0003123490"
+      - generic [ref=f4e21]: 株式会社ﾕﾆｼｽ
+      - generic [ref=f4e22]: （株）ユニシス
+  - table [ref=f4e24]:
+    - rowgroup [ref=f4e25]:
+      - row [ref=f4e26]:
+        - cell [ref=f4e27]:
+          - table [ref=f4e30]:
+            - rowgroup [ref=f4e31]:
+              - row [ref=f4e32]:
+                - cell [ref=f4e33]
+                - cell [ref=f4e34]
+              - row [ref=f4e35]:
+                - cell [ref=f4e36]:
+                  - group "カバーシート情報入力" [ref=f4e38]:
+                    - generic [ref=f4e41]:
+                      - text: "* バッチ店舗"
+                      - textbox [disabled] [ref=f4e42]: "035"
+                    - generic [ref=f4e44]:
+                      - text: "* 伝票種別"
+                      - combobox [ref=f4e45]:
+                        - option "廃棄伝票" [selected]
+                        - option "売変伝票"
+                    - generic [ref=f4e47]:
+                      - text: "* 伝票区分"
+                      - combobox [disabled] [ref=f4e48]:
+                        - option "廃棄" [selected]
+                    - generic [ref=f4e50]:
+                      - text: "* バッチ番号"
+                      - textbox [ref=f4e51]
+                    - generic [ref=f4e53]:
+                      - text: "* バッチ日付"
+                      - textbox [ref=f4e54]
+                    - button "カバー保存" [ref=f4e57]
+                    - table [ref=f4e60]:
+                      - rowgroup [ref=f4e61]:
+                        - row [ref=f4e62]:
+                          - cell "入力状況情報" [ref=f4e63]
+                          - cell [ref=f4e64]
+                        - row [ref=f4e65]:
+                          - cell [ref=f4e66]:
+                            - table [ref=f4e69]:
+                              - rowgroup [ref=f4e72]:
+                                - row [ref=f4e73]:
+                                  - cell [ref=f4e74]:
+                                    - table [ref=f4e75]:
+                                      - rowgroup [ref=f4e76]:
+                                        - row [ref=f4e77]:
+                                          - cell [ref=f4e78]:
+                                            - table [ref=f4e80]:
+                                              - rowgroup [ref=f4e81]:
+                                                - row [ref=f4e82]:
+                                                  - columnheader "No" [ref=f4e83]
+                                                  - columnheader "伝票番号" [ref=f4e85]
+                                                  - columnheader "ステータス" [ref=f4e86]
+                                      - rowgroup [ref=f4e88]:
+                                        - row [ref=f4e89]:
+                                          - cell [ref=f4e90]:
+                                            - generic [ref=f4e91]:
+                                              - grid:
+                                                - rowgroup
+                                      - rowgroup
+                  - button "次へ(新カバー):F6" [ref=f4e95]
+        - cell "伝票種別 08 廃棄伝票 伝票区分 01 廃棄 バッチ番号 伝票ヘッダー情報 伝票明細情報 再計算 新規:F7 保存:F12 伝票取消" [ref=f4e96]:
+          - generic [ref=f4e97]:
+            - generic [ref=f4e98]: 伝票種別 08
+            - generic [ref=f4e99]: 廃棄伝票
+            - generic [ref=f4e100]: 伝票区分 01
+            - generic [ref=f4e101]: 廃棄
+          - generic [ref=f4e102]: バッチ番号
+          - table [ref=f4e106]:
+            - rowgroup [ref=f4e107]:
+              - row [ref=f4e108]:
+                - cell [ref=f4e109]
+                - cell [ref=f4e110]
+              - row [ref=f4e111]:
+                - cell [ref=f4e112]:
+                  - group "伝票ヘッダー情報" [ref=f4e114]:
+                    - generic [ref=f4e116]:
+                      - generic [ref=f4e117]:
+                        - text: "* 伝票番号"
+                        - textbox [disabled] [ref=f4e118]
+                      - generic [ref=f4e119]:
+                        - text: "* 店舗"
+                        - textbox [disabled] [ref=f4e120]: "035"
+                    - generic [ref=f4e121]:
+                      - generic [ref=f4e122]:
+                        - text: "* 売変または廃棄日"
+                        - textbox [disabled] [ref=f4e123]
+                      - generic [ref=f4e124]:
+                        - text: "* 部門"
+                        - textbox [disabled] [ref=f4e125]
+                      - button "参照" [disabled] [ref=f4e127]
+          - table [ref=f4e130]:
+            - rowgroup [ref=f4e131]:
+              - row [ref=f4e132]:
+                - cell [ref=f4e133]
+                - cell [ref=f4e134]
+              - row [ref=f4e135]:
+                - cell [ref=f4e136]:
+                  - group "伝票明細情報" [ref=f4e138]:
+                    - generic [ref=f4e140]:
+                      - button "全選択" [ref=f4e142]
+                      - button "全解除" [ref=f4e144]
+                    - table [ref=f4e147]:
+                      - rowgroup [ref=f4e148]:
+                        - row [ref=f4e149]:
+                          - cell [ref=f4e150]
+                          - cell [ref=f4e151]
+                        - row [ref=f4e152]:
+                          - cell [ref=f4e153]:
+                            - table [ref=f4e155]:
+                              - rowgroup [ref=f4e158]:
+                                - row [ref=f4e159]:
+                                  - cell [ref=f4e160]:
+                                    - table [ref=f4e161]:
+                                      - rowgroup [ref=f4e162]:
+                                        - row [ref=f4e163]:
+                                          - cell [ref=f4e164]:
+                                            - table [ref=f4e166]:
+                                              - rowgroup [ref=f4e167]:
+                                                - row [ref=f4e168]:
+                                                  - columnheader "選択" [ref=f4e169]
+                                                  - columnheader "行" [ref=f4e171]
+                                                  - columnheader "* 商品" [ref=f4e173]
+                                                  - columnheader "商品名称" [ref=f4e174]
+                                                  - columnheader "* 数量" [ref=f4e176]
+                                                  - columnheader "売単価" [ref=f4e177]
+                                                  - columnheader "金額" [ref=f4e178]
+                                                  - columnheader "* 事由" [ref=f4e179]
+                                      - rowgroup [ref=f4e180]:
+                                        - row [ref=f4e181]:
+                                          - cell [ref=f4e182]:
+                                            - generic [ref=f4e183]:
+                                              - grid:
+                                                - rowgroup
+                                      - rowgroup
+                    - table [ref=f4e186]:
+                      - rowgroup [ref=f4e187]:
+                        - row [ref=f4e188]:
+                          - cell [ref=f4e189]
+                          - cell [ref=f4e190]
+                        - row [ref=f4e191]:
+                          - cell [ref=f4e192]
+                    - button "行削除:F2" [disabled] [ref=f4e195]
+                    - table [ref=f4e197]:
+                      - rowgroup [ref=f4e198]:
+                        - row [ref=f4e199]:
+                          - cell "合計金額" [ref=f4e200]
+                          - cell "0" [ref=f4e201]
+          - generic [ref=f4e202]:
+            - button "再計算" [disabled] [ref=f4e204]
+            - button "新規:F7" [ref=f4e206]
+            - button "保存:F12" [disabled] [ref=f4e208]
+            - button "伝票取消" [disabled] [ref=f4e210]
+  - table [ref=f4e211]:
+    - rowgroup [ref=f4e212]:
+      - row [ref=f4e213]:
+        - cell [ref=f4e214]
+  - table
+  - generic [ref=f4e216]:
+    - generic:
+      - generic [ref=f4e217]:
+        - button "Submit" [ref=f4e218] [cursor=pointer]
+        - text: "551"
+        - button "Submit" [ref=f4e219] [cursor=pointer]
+        - text: "678"
+      - generic [ref=f4e220]:
+        - link "未確認のアラート情報が551件存在します。" [ref=f4e222] [cursor=pointer]:
+          - /url: javascript:__doPostBack('ctl00$CautionModalLinkButton','')
+        - link "未確認のお知らせ情報が678件存在します。" [ref=f4e224] [cursor=pointer]:
+          - /url: javascript:__doPostBack('ctl00$InfoModalLinkButton','')

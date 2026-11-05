@@ -1,0 +1,89 @@
+- generic [ref=f11e2]:
+  - generic [ref=f11e8]:
+    - button "閉じる" [ref=f11e10]
+    - generic [ref=f11e12]:
+      - generic [ref=f11e13]: "0003123490"
+      - generic [ref=f11e14]: 株式会社ﾕﾆｼｽ
+      - generic [ref=f11e15]: （株）ユニシス
+  - generic [ref=f11e16]:
+    - generic [ref=f11e17]:
+      - generic [ref=f11e18]: 伝票番号 010000017
+      - generic [ref=f11e19]: 伝票種別名称 値下
+      - generic [ref=f11e20]: 伝票区分名称 売変伝票
+    - generic [ref=f11e21]:
+      - generic [ref=f11e22]: 店舗名称 池袋店
+      - generic [ref=f11e23]: 部門コード 017
+    - generic [ref=f11e24]:
+      - generic [ref=f11e25]: 伝票旧売価金額合計 1,500
+      - generic [ref=f11e26]: 伝票新売価金額合計 1,350
+    - table [ref=f11e29]:
+      - rowgroup [ref=f11e30]:
+        - row [ref=f11e31]:
+          - cell [ref=f11e32]
+          - cell [ref=f11e33]
+        - row [ref=f11e34]:
+          - cell [ref=f11e35]:
+            - group "伝票明細" [ref=f11e37]:
+              - table [ref=f11e41]:
+                - rowgroup [ref=f11e42]:
+                  - row [ref=f11e43]:
+                    - cell [ref=f11e44]
+                    - cell [ref=f11e45]
+                  - row [ref=f11e46]:
+                    - cell [ref=f11e47]:
+                      - table [ref=f11e50]:
+                        - rowgroup [ref=f11e51]:
+                          - row [ref=f11e52]:
+                            - cell [ref=f11e53]:
+                              - table [ref=f11e54]:
+                                - rowgroup [ref=f11e55]:
+                                  - row [ref=f11e56]:
+                                    - cell [ref=f11e57]:
+                                      - table [ref=f11e59]:
+                                        - rowgroup [ref=f11e60]:
+                                          - row [ref=f11e61]:
+                                            - columnheader "行" [ref=f11e62]
+                                            - columnheader "商品コード" [ref=f11e63]
+                                            - columnheader "商品名称（漢字）" [ref=f11e64]
+                                            - columnheader "数量" [ref=f11e65]
+                                            - columnheader "伝票旧売価" [ref=f11e66]
+                                            - columnheader "伝票新売価金額" [ref=f11e67]
+                                            - columnheader "売変区分" [ref=f11e68]
+                                            - columnheader "事由" [ref=f11e69]
+                                            - columnheader "売変金額" [ref=f11e70]
+                                - rowgroup [ref=f11e71]:
+                                  - row [ref=f11e72]:
+                                    - cell [ref=f11e73]:
+                                      - grid [ref=f11e75]:
+                                        - rowgroup [ref=f11e76]:
+                                          - row [ref=f11e77]:
+                                            - gridcell "1" [ref=f11e78]
+                                            - gridcell "00000051" [ref=f11e79]
+                                            - gridcell "タバコ 商品名称更新 １コ" [ref=f11e80]
+                                            - gridcell "3" [ref=f11e81]
+                                            - gridcell "500" [ref=f11e83]
+                                            - gridcell "450" [ref=f11e85]
+                                            - gridcell [ref=f11e87]
+                                            - gridcell "値下事由Ｂ" [ref=f11e88]
+                                            - gridcell "150" [ref=f11e89]
+                                - rowgroup
+                          - row [ref=f11e91]:
+                            - cell [ref=f11e92]
+    - button "戻る:F1" [ref=f11e97]
+  - table [ref=f11e98]:
+    - rowgroup [ref=f11e99]:
+      - row [ref=f11e100]:
+        - cell [ref=f11e101]
+  - table
+  - generic [ref=f11e103]:
+    - generic:
+      - generic [ref=f11e104]:
+        - button "Submit" [ref=f11e105] [cursor=pointer]
+        - text: "551"
+        - button "Submit" [ref=f11e106] [cursor=pointer]
+        - text: "678"
+      - generic [ref=f11e107]:
+        - link "未確認のアラート情報が551件存在します。" [ref=f11e109] [cursor=pointer]:
+          - /url: javascript:__doPostBack('ctl00$CautionModalLinkButton','')
+        - link "未確認のお知らせ情報が678件存在します。" [ref=f11e111] [cursor=pointer]:
+          - /url: javascript:__doPostBack('ctl00$InfoModalLinkButton','')

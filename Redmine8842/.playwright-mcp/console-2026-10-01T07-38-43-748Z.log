@@ -1,0 +1,2 @@
+[   92954ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://crmapv01:8080/CoreCenter/login.aspx?ReturnUrl=%2fCoreCenter%2fRetail%2fSales%2fInputSalesSlip%2fSalesChangeDisposalSlip%2fSalesChangeDisposalSlipSearchResult.aspx%3fwid%3dffe2b3c4f9354a4287b270e8d67e4a7a&wid=ffe2b3c4f9354a4287b270e8d67e4a7a:0
+[   92979ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://crmapv01:8080/favicon.ico:0

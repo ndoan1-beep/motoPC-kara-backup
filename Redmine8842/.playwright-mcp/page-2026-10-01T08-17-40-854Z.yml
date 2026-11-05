@@ -1,0 +1,26 @@
+- generic [ref=f2e2]:
+  - separator [ref=f2e4]
+  - table [ref=f2e9]:
+    - rowgroup [ref=f2e10]:
+      - row [ref=f2e11]:
+        - cell "ユーザID：" [ref=f2e12]
+        - cell [ref=f2e13]:
+          - textbox [active] [ref=f2e14]
+      - row [ref=f2e15]:
+        - cell "パスワード：" [ref=f2e16]
+        - cell [ref=f2e17]:
+          - textbox [ref=f2e18]
+      - row [ref=f2e19]:
+        - cell "法人：" [ref=f2e20]
+        - cell "（既定の法人）" [ref=f2e22]:
+          - combobox [ref=f2e23]:
+            - option "（既定の法人）" [selected]
+            - option "（株）UBK"
+            - option "（株）ユニシス"
+            - option "（株）ユニシスストア"
+            - option "株式会社ユニシスストア"
+            - option "セットアップ法人"
+      - row [ref=f2e24]:
+        - cell [ref=f2e25]:
+          - button "ログイン" [ref=f2e26]
+  - separator [ref=f2e27]

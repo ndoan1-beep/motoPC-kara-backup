@@ -1,0 +1,111 @@
+- generic [ref=f10e2]:
+  - generic [ref=f10e8]:
+    - button "閉じる" [ref=f10e10]
+    - table [ref=f10e13]:
+      - rowgroup [ref=f10e14]:
+        - row [ref=f10e15]:
+          - cell "検索" [ref=f10e16]
+    - generic [ref=f10e17]:
+      - generic [ref=f10e18]: "0003123490"
+      - generic [ref=f10e19]: 株式会社ﾕﾆｼｽ
+      - generic [ref=f10e20]: （株）ユニシス
+  - generic [ref=f10e21]:
+    - table [ref=f10e24]:
+      - rowgroup [ref=f10e25]:
+        - row [ref=f10e26]:
+          - cell [ref=f10e27]
+          - cell [ref=f10e28]
+        - row [ref=f10e29]:
+          - cell [ref=f10e30]:
+            - group "伝票検索結果一覧" [ref=f10e32]:
+              - table [ref=f10e36]:
+                - rowgroup [ref=f10e37]:
+                  - row [ref=f10e38]:
+                    - cell [ref=f10e39]
+                    - cell [ref=f10e40]
+                  - row [ref=f10e41]:
+                    - cell [ref=f10e42]:
+                      - table [ref=f10e45]:
+                        - rowgroup [ref=f10e46]:
+                          - row [ref=f10e47]:
+                            - cell [ref=f10e48]:
+                              - table [ref=f10e49]:
+                                - rowgroup [ref=f10e50]:
+                                  - row [ref=f10e51]:
+                                    - cell [ref=f10e52]:
+                                      - table [ref=f10e54]:
+                                        - rowgroup [ref=f10e55]:
+                                          - row [ref=f10e56]:
+                                            - columnheader "伝票修正" [ref=f10e57]
+                                            - columnheader "売変・廃棄日" [ref=f10e58]
+                                            - columnheader "伝票種別" [ref=f10e59]
+                                            - columnheader "伝票種別名称" [ref=f10e60]
+                                            - columnheader "伝票区分" [ref=f10e61]
+                                            - columnheader "伝票区分名称" [ref=f10e62]
+                                            - columnheader "伝票番号" [ref=f10e63]
+                                            - columnheader "店舗コード" [ref=f10e64]
+                                            - columnheader "部門コード" [ref=f10e65]
+                                            - columnheader "合計数量" [ref=f10e66]
+                                            - columnheader "伝票金額合計" [ref=f10e67]
+                                            - columnheader "バッチ番号" [ref=f10e68]
+                                - rowgroup [ref=f10e69]:
+                                  - row [ref=f10e70]:
+                                    - cell [ref=f10e71]:
+                                      - grid [ref=f10e73]:
+                                        - rowgroup [ref=f10e74]:
+                                          - row [ref=f10e75]:
+                                            - gridcell [ref=f10e76]:
+                                              - button "修正" [ref=f10e77]
+                                            - gridcell "2026/07/24" [ref=f10e78]
+                                            - gridcell "07" [ref=f10e79]
+                                            - gridcell "値下" [ref=f10e80]
+                                            - gridcell "02" [ref=f10e81]
+                                            - gridcell "売変伝票" [ref=f10e82]
+                                            - gridcell [ref=f10e83]:
+                                              - link "010000017" [ref=f10e84] [cursor=pointer]:
+                                                - /url: javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$MainContent$SlipListGridView$it6_0$SARSlipHeader_SlipNumber_Control", "", true, "", "", false, true))
+                                            - gridcell "035" [ref=f10e85]
+                                            - gridcell "017" [ref=f10e86]
+                                            - gridcell "3" [ref=f10e87]
+                                            - gridcell "1,350" [ref=f10e89]
+                                            - gridcell "0200000003" [ref=f10e91]
+                                          - row [ref=f10e92]:
+                                            - gridcell [ref=f10e93]:
+                                              - button "修正" [ref=f10e94]
+                                            - gridcell "2026/07/10" [ref=f10e95]
+                                            - gridcell "08" [ref=f10e96]
+                                            - gridcell "廃棄" [ref=f10e97]
+                                            - gridcell "01" [ref=f10e98]
+                                            - gridcell "廃棄伝票" [ref=f10e99]
+                                            - gridcell [ref=f10e100]:
+                                              - link "010000020" [ref=f10e101] [cursor=pointer]:
+                                                - /url: javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$MainContent$SlipListGridView$it6_1$SARSlipHeader_SlipNumber_Control", "", true, "", "", false, true))
+                                            - gridcell "035" [ref=f10e102]
+                                            - gridcell "017" [ref=f10e103]
+                                            - gridcell "2" [ref=f10e104]
+                                            - gridcell "0" [ref=f10e106]
+                                            - gridcell "0300000001" [ref=f10e108]
+                                - rowgroup
+                          - row [ref=f10e109]:
+                            - cell [ref=f10e110]
+    - button "戻る:F1" [ref=f10e115]
+  - table [ref=f10e116]:
+    - rowgroup [ref=f10e117]:
+      - row [ref=f10e118]:
+        - cell [ref=f10e119]
+  - table
+  - generic [ref=f10e120]:
+    - generic [ref=f10e121]:
+      - generic:
+        - generic [ref=f10e122]:
+          - button "Submit" [ref=f10e123] [cursor=pointer]
+          - text: "551"
+          - button "Submit" [ref=f10e124] [cursor=pointer]
+          - text: "678"
+        - generic [ref=f10e125]:
+          - link "未確認のアラート情報が551件存在します。" [ref=f10e127] [cursor=pointer]:
+            - /url: javascript:__doPostBack('ctl00$CautionModalLinkButton','')
+          - link "未確認のお知らせ情報が678件存在します。" [ref=f10e129] [cursor=pointer]:
+            - /url: javascript:__doPostBack('ctl00$InfoModalLinkButton','')
+    - list [ref=f10e132]:
+      - listitem [ref=f10e133]: ！該当伝票は既に承認されています。！

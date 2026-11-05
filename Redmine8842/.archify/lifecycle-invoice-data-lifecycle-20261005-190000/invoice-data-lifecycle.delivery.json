@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "fcafc74b-deca-42b9-b2d6-860ee5211062",
+  "status": "current",
+  "command": "deliver",
+  "type": "lifecycle",
+  "input": "Y:\\Profile\\Desktop\\Redmine8842\\.archify\\lifecycle-invoice-data-lifecycle-20261005-190000\\candidate.json",
+  "output": "Y:\\Profile\\Desktop\\Redmine8842\\.archify\\lifecycle-invoice-data-lifecycle-20261005-190000\\invoice-data-lifecycle.html",
+  "specification": {
+    "sha256": "150425dda84e2d188f2f6be95535641f1cde58ca566565f22b5a71717dc52104",
+    "bytes": 12825
+  },
+  "artifact": {
+    "sha256": "1aaa134404f1077a9f42c7435ef32f36a294b6930223c95e86cceae9f53ecdfb",
+    "bytes": 787302
+  }
+}

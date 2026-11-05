@@ -1,0 +1,112 @@
+- generic [ref=f2e2]:
+  - generic [ref=f2e8]:
+    - button "閉じる" [ref=f2e10]
+    - link [ref=f2e12] [cursor=pointer]:
+      - /url: ../../../../Help/CC_R_SCR/SCRCSAR050215.htm
+      - img "PageHelp" [ref=f2e13]
+    - table [ref=f2e15]:
+      - rowgroup [ref=f2e16]:
+        - row [ref=f2e17]:
+          - cell "検索" [ref=f2e18]
+    - generic [ref=f2e19]:
+      - generic [ref=f2e20]: "0003123490"
+      - generic [ref=f2e21]: 情報システム部
+      - generic [ref=f2e22]: （株）ユニシス
+  - generic [ref=f2e23]:
+    - generic [ref=f2e24]:
+      - generic [ref=f2e25]:
+        - text: 期間
+        - textbox [ref=f2e26]: 2026/07/22
+      - generic [ref=f2e27]:
+        - text: ～
+        - textbox [ref=f2e28]: 2026/07/22
+    - table [ref=f2e31]:
+      - rowgroup [ref=f2e32]:
+        - row [ref=f2e33]:
+          - cell "伝票種別・区分" [ref=f2e34]
+          - cell [ref=f2e35]:
+            - listbox [ref=f2e36]:
+              - option "07：値下・売変伝票" [ref=f2e37]
+              - option "08：廃棄・廃棄伝票" [ref=f2e38]
+              - option "07：値上・売変伝票" [ref=f2e39]
+    - table [ref=f2e42]:
+      - rowgroup [ref=f2e43]:
+        - row [ref=f2e44]:
+          - cell [ref=f2e45]
+          - cell [ref=f2e46]
+        - row [ref=f2e47]:
+          - cell [ref=f2e48]:
+            - group "店舗指定" [ref=f2e50]:
+              - generic [ref=f2e52]:
+                - table [ref=f2e54]:
+                  - rowgroup [ref=f2e55]:
+                    - row [ref=f2e56]:
+                      - cell [ref=f2e57]
+                      - cell [ref=f2e58]
+                    - row [ref=f2e59]:
+                      - cell "店舗（センター）コード 035 池袋店" [ref=f2e60]:
+                        - generic [ref=f2e62]:
+                          - generic [ref=f2e63]:
+                            - text: 店舗（センター）コード
+                            - textbox [disabled] [ref=f2e64]: "035"
+                          - generic [ref=f2e65]: 池袋店
+                - table [ref=f2e67]:
+                  - rowgroup [ref=f2e68]:
+                    - row [ref=f2e69]:
+                      - cell [ref=f2e70]
+                      - cell [ref=f2e71]
+                    - row [ref=f2e72]:
+                      - cell [ref=f2e73]:
+                        - generic [ref=f2e76]:
+                          - text: 部門コード
+                          - textbox [ref=f2e77]
+    - generic [ref=f2e78]:
+      - generic [ref=f2e79]:
+        - text: 入力バッチ番号
+        - textbox [ref=f2e80]
+      - generic [ref=f2e81]:
+        - text: 入力媒体区分
+        - combobox [ref=f2e82]:
+          - option "1:画面" [selected]
+          - option "2:PDA"
+          - option "3:バッチ"
+    - table [ref=f2e84]:
+      - rowgroup [ref=f2e85]:
+        - row [ref=f2e86]:
+          - cell [ref=f2e87]
+          - cell [ref=f2e88]:
+            - table [ref=f2e90]:
+              - rowgroup [ref=f2e91]:
+                - row [ref=f2e92]:
+                  - cell [ref=f2e93]
+                  - cell [ref=f2e94]
+                - row [ref=f2e95]:
+                  - cell [ref=f2e96]:
+                    - group "履歴表示" [ref=f2e98]:
+                      - generic [ref=f2e102]:
+                        - radio "最新" [checked] [ref=f2e103]
+                        - text: 最新
+                      - generic [ref=f2e106]:
+                        - radio "履歴" [ref=f2e107]
+                        - text: 履歴
+          - cell [ref=f2e108]
+    - generic [ref=f2e109]:
+      - button "クリア:F3" [ref=f2e111]
+      - button "検索:F4" [ref=f2e113]
+  - table [ref=f2e114]:
+    - rowgroup [ref=f2e115]:
+      - row [ref=f2e116]:
+        - cell [ref=f2e117]
+  - table
+  - generic [ref=f2e119]:
+    - generic:
+      - generic [ref=f2e120]:
+        - button "Submit" [ref=f2e121] [cursor=pointer]
+        - text: "550"
+        - button "Submit" [ref=f2e122] [cursor=pointer]
+        - text: "679"
+      - generic [ref=f2e123]:
+        - link "未確認のアラート情報が550件存在します。" [ref=f2e125] [cursor=pointer]:
+          - /url: javascript:__doPostBack('ctl00$CautionModalLinkButton','')
+        - link "未確認のお知らせ情報が679件存在します。" [ref=f2e127] [cursor=pointer]:
+          - /url: javascript:__doPostBack('ctl00$InfoModalLinkButton','')

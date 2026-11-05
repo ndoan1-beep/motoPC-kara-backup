@@ -1,0 +1,489 @@
+{
+  "schema_version": 2,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "Editable Sales Change/Disposal Slip Data Lifecycle",
+    "subtitle": "SCRCSAR050202 input and SCRCSAR050215 search path until correction/cancel eligibility changes",
+    "output": ".archify/lifecycle-invoice-data-lifecycle-20261005-190000/invoice-data-lifecycle.html",
+    "quality_profile": "showcase",
+    "animation": "trace",
+    "repository": {
+      "url": "https://local.example/CoreCenterRetail.git",
+      "link_mode": "local-only",
+      "revision": "0d9b3e349c7723f3c1cc0aadefa0b97a8cab33fe"
+    },
+    "legend": {
+      "mode": "all",
+      "entries": {
+        "start": {
+          "label": "entry point"
+        },
+        "active": {
+          "label": "editable data"
+        },
+        "waiting": {
+          "label": "confirmation wait"
+        },
+        "decision": {
+          "label": "gate / condition"
+        },
+        "success": {
+          "label": "persisted target"
+        },
+        "failure": {
+          "label": "blocked path"
+        },
+        "neutral": {
+          "label": "read-only / not editable"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "main",
+      "label": "Main editable invoice path"
+    },
+    {
+      "id": "gate",
+      "label": "Search and correction gates"
+    },
+    {
+      "id": "cancel",
+      "label": "Cancel data path"
+    },
+    {
+      "id": "terminal",
+      "label": "Blocked or terminal states"
+    }
+  ],
+  "states": [
+    {
+      "id": "input_new",
+      "type": "start",
+      "label": "Input start",
+      "sublabel": "SCRCSAR050202; unsaved",
+      "lane": "main",
+      "col": 0,
+      "step": "01",
+      "tag": "UI",
+      "sources": [
+        {
+          "path": "InputSalesSlip.Web/Sales/InputSalesSlip/SalesChangeDisposalSlipInput/SalesChangeDisposalSlipInputUpdate_partial.cs",
+          "line": 7901,
+          "end_line": 8008,
+          "label": "header validation"
+        }
+      ]
+    },
+    {
+      "id": "valid_screen_data",
+      "type": "active",
+      "label": "Valid input",
+      "sublabel": "required fields OK",
+      "lane": "main",
+      "col": 1,
+      "step": "02",
+      "tag": "valid",
+      "sources": [
+        {
+          "path": "InputSalesSlip.Web/Sales/InputSalesSlip/SalesChangeDisposalSlipInput/SalesChangeDisposalSlipInputUpdate_partial.cs",
+          "line": 7901,
+          "end_line": 8008,
+          "label": "required checks"
+        }
+      ]
+    },
+    {
+      "id": "saved_editable_work",
+      "type": "success",
+      "label": "Saved editable",
+      "sublabel": "LogicalDelFlg=0",
+      "lane": "main",
+      "col": 2,
+      "step": "03",
+      "tag": "persisted",
+      "sources": [
+        {
+          "path": "InputSalesSlip.Web/Sales/InputSalesSlip/SalesChangeDisposalSlipInput/SalesChangeDisposalSlipInputUpdate_partial.cs",
+          "line": 2364,
+          "end_line": 2389,
+          "label": "save facade"
+        },
+        {
+          "path": "InputSalesSlip.Business/SalesChangeDisposalSlipEntryNewBusiness.cs",
+          "line": 2455,
+          "end_line": 2465,
+          "label": "normal error upsert"
+        },
+        {
+          "path": "InputSalesSlip.Business/SalesChangeDisposalSlipEntryNewDataAccessComponent.cs",
+          "line": 4163,
+          "end_line": 4199,
+          "label": "header params"
+        }
+      ]
+    },
+    {
+      "id": "search_result_row",
+      "type": "decision",
+      "label": "Search row",
+      "sublabel": "SCRCSAR050215 match",
+      "lane": "main",
+      "col": 3,
+      "step": "04",
+      "tag": "SCRCSAR050215",
+      "sources": [
+        {
+          "path": "InputSalesSlip.Business/SlipHeaderListDataSet.cs",
+          "line": 155,
+          "end_line": 200,
+          "label": "SARSlipHeader filters"
+        },
+        {
+          "path": "InputSalesSlip.Business/SlipHeaderListDataSet.cs",
+          "line": 318,
+          "end_line": 370,
+          "label": "Error table filters"
+        }
+      ]
+    },
+    {
+      "id": "editable_loaded",
+      "type": "active",
+      "label": "Loaded to edit",
+      "sublabel": "session keys -> 050202",
+      "lane": "main",
+      "col": 4,
+      "step": "05",
+      "tag": "edit OK",
+      "sources": [
+        {
+          "path": "InputSalesSlip.Web/Sales/InputSalesSlip/SalesChangeDisposalSlip/SalesChangeDisposalSlipSearchResult_partial.cs",
+          "line": 389,
+          "end_line": 493,
+          "label": "correction click"
+        }
+      ]
+    },
+    {
+      "id": "validation_blocked",
+      "type": "failure",
+      "label": "Input blocked",
+      "sublabel": "validation error",
+      "lane": "terminal",
+      "col": 1,
+      "tag": "input error",
+      "sources": [
+        {
+          "path": "InputSalesSlip.Web/Sales/InputSalesSlip/SalesChangeDisposalSlipInput/SalesChangeDisposalSlipInputUpdate_partial.cs",
+          "line": 7901,
+          "end_line": 8008,
+          "label": "validation"
+        }
+      ]
+    },
+    {
+      "id": "correction_available",
+      "type": "decision",
+      "label": "Edit OK flag",
+      "sublabel": "rev!=1 / FixDate null",
+      "lane": "gate",
+      "col": 3,
+      "tag": "button visible",
+      "sources": [
+        {
+          "path": "InputSalesSlip.Business/SlipHeaderListDataSet.cs",
+          "line": 115,
+          "end_line": 119,
+          "label": "header availability"
+        },
+        {
+          "path": "InputSalesSlip.Business/SlipHeaderListDataSet.cs",
+          "line": 291,
+          "end_line": 294,
+          "label": "error availability"
+        },
+        {
+          "path": "InputSalesSlip.Web/Sales/InputSalesSlip/SalesChangeDisposalSlip/SalesChangeDisposalSlipSearchResult_partial.cs",
+          "line": 250,
+          "end_line": 263,
+          "label": "button hide"
+        }
+      ]
+    },
+    {
+      "id": "approval_gate",
+      "type": "decision",
+      "label": "Approval gate",
+      "sublabel": "Status=3 needs AP OK",
+      "lane": "gate",
+      "col": 4,
+      "tag": "approved?",
+      "sources": [
+        {
+          "path": "InputSalesSlip.Web/Sales/InputSalesSlip/SalesChangeDisposalSlip/SalesChangeDisposalSlipSearchResult_partial.cs",
+          "line": 402,
+          "end_line": 500,
+          "label": "approval gate"
+        }
+      ]
+    },
+    {
+      "id": "cancel_pressed",
+      "type": "active",
+      "label": "Cancel pressed",
+      "sublabel": "CancelMode=1",
+      "lane": "cancel",
+      "col": 2,
+      "tag": "cancel start",
+      "sources": [
+        {
+          "path": "InputSalesSlip.Web/Sales/InputSalesSlip/SalesChangeDisposalSlipInput/SalesChangeDisposalSlipInputUpdate_partial.cs",
+          "line": 1489,
+          "end_line": 1543,
+          "label": "cancel setup"
+        }
+      ]
+    },
+    {
+      "id": "confirm_wait",
+      "type": "waiting",
+      "label": "Confirm wait",
+      "sublabel": "050208 if enabled",
+      "lane": "cancel",
+      "col": 3,
+      "tag": "confirm",
+      "sources": [
+        {
+          "path": "InputSalesSlip.Web/Sales/InputSalesSlip/SalesChangeDisposalSlipInput/SalesChangeDisposalSlipInputUpdate_partial.cs",
+          "line": 1562,
+          "end_line": 1574,
+          "label": "confirm branch"
+        }
+      ]
+    },
+    {
+      "id": "cancel_completed",
+      "type": "success",
+      "label": "Cancel complete",
+      "sublabel": "red slip locks edit",
+      "lane": "cancel",
+      "col": 4,
+      "tag": "red slip",
+      "sources": [
+        {
+          "path": "InputSalesSlip.Business/SalesChangeDisposalSlipEntryNewBusiness.cs",
+          "line": 2190,
+          "end_line": 2204,
+          "label": "cancel business"
+        },
+        {
+          "path": "InputSalesSlip.Business/SalesChangeDisposalSlipEntryNewDataAccessComponent.cs",
+          "line": 3221,
+          "end_line": 3300,
+          "label": "red header"
+        },
+        {
+          "path": "InputSalesSlip.Business/SalesChangeDisposalSlipEntryNewDataAccessComponent.cs",
+          "line": 1361,
+          "end_line": 1460,
+          "label": "lock updates"
+        }
+      ]
+    },
+    {
+      "id": "unsaved_cancel_rejected",
+      "type": "failure",
+      "label": "Unsaved cancel",
+      "sublabel": "ERRCSARB0273",
+      "lane": "terminal",
+      "col": 0,
+      "tag": "not persisted",
+      "sources": [
+        {
+          "path": "InputSalesSlip.Web/Sales/InputSalesSlip/SalesChangeDisposalSlipInput/SalesChangeDisposalSlipInputUpdate_partial.cs",
+          "line": 1460,
+          "end_line": 1484,
+          "label": "unsaved cancel"
+        }
+      ]
+    },
+    {
+      "id": "not_editable",
+      "type": "neutral",
+      "label": "Not editable",
+      "sublabel": "button hidden",
+      "lane": "terminal",
+      "col": 3,
+      "tag": "edit blocked",
+      "sources": [
+        {
+          "path": "InputSalesSlip.Web/Sales/InputSalesSlip/SalesChangeDisposalSlip/SalesChangeDisposalSlipSearchResult_partial.cs",
+          "line": 250,
+          "end_line": 263,
+          "label": "hide correction"
+        }
+      ]
+    },
+    {
+      "id": "approved_blocked",
+      "type": "failure",
+      "label": "Approved blocked",
+      "sublabel": "ERRCSARB0139",
+      "lane": "terminal",
+      "col": 4,
+      "tag": "approved",
+      "sources": [
+        {
+          "path": "InputSalesSlip.Web/Sales/InputSalesSlip/SalesChangeDisposalSlip/SalesChangeDisposalSlipSearchResult_partial.cs",
+          "line": 475,
+          "end_line": 500,
+          "label": "approved block"
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "from": "input_new",
+      "to": "valid_screen_data",
+      "label": "valid OK",
+      "labelDy": 38
+    },
+    {
+      "from": "input_new",
+      "to": "unsaved_cancel_rejected",
+      "label": "cancel unsaved",
+      "variant": "security"
+    },
+    {
+      "from": "valid_screen_data",
+      "to": "validation_blocked",
+      "label": "validation NG",
+      "variant": "security"
+    },
+    {
+      "from": "valid_screen_data",
+      "to": "saved_editable_work",
+      "label": "save",
+      "labelDy": 38
+    },
+    {
+      "from": "saved_editable_work",
+      "to": "search_result_row",
+      "label": "search",
+      "labelDy": 38
+    },
+    {
+      "from": "search_result_row",
+      "to": "correction_available",
+      "label": "evaluate"
+    },
+    {
+      "from": "correction_available",
+      "to": "editable_loaded",
+      "label": "flag=1"
+    },
+    {
+      "from": "correction_available",
+      "to": "not_editable",
+      "label": "flag=0",
+      "variant": "security"
+    },
+    {
+      "from": "editable_loaded",
+      "to": "approval_gate",
+      "label": "edit",
+      "labelAt": [
+        1088,
+        178
+      ]
+    },
+    {
+      "from": "approval_gate",
+      "to": "editable_loaded",
+      "label": "AP OK",
+      "labelAt": [
+        1088,
+        222
+      ]
+    },
+    {
+      "from": "approval_gate",
+      "to": "approved_blocked",
+      "label": "AP NG",
+      "variant": "security"
+    },
+    {
+      "from": "editable_loaded",
+      "to": "valid_screen_data",
+      "label": "edit and save",
+      "variant": "dashed"
+    },
+    {
+      "from": "editable_loaded",
+      "to": "cancel_pressed",
+      "label": "cancel"
+    },
+    {
+      "from": "cancel_pressed",
+      "to": "confirm_wait",
+      "label": "confirm on",
+      "labelAt": [
+        600,
+        515
+      ]
+    },
+    {
+      "from": "confirm_wait",
+      "to": "cancel_completed",
+      "label": "confirm OK",
+      "labelAt": [
+        810,
+        515
+      ]
+    },
+    {
+      "from": "cancel_pressed",
+      "to": "cancel_completed",
+      "label": "confirm off",
+      "variant": "emphasis"
+    },
+    {
+      "from": "cancel_completed",
+      "to": "not_editable",
+      "label": "lock edit",
+      "variant": "security"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Editable condition",
+      "items": [
+        "Search result can show Correction only when SlipCorrectionAvailabilityFlg is 1.",
+        "Normal header rows derive it from SlipRevisionFlg != '1'.",
+        "Error/work rows derive it from FixDate IS NULL."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Search condition effect",
+      "items": [
+        "Non-empty date, store, department, media, slip number, or slip type filters narrow the query.",
+        "LogicalDelFlg <> '1' is required for both normal and error table paths.",
+        "When history display is not enabled, normal header rows with SlipRevisionFlg='1' are filtered out."
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Cancel outcome",
+      "items": [
+        "Unsaved cancel stops with ERRCSARB0273.",
+        "Saved cancel sets CancelMode=1 and creates a red slip path.",
+        "After cancel, SARSlipHeader.SlipRevisionFlg and SARSlipHeaderError.FixDate make correction unavailable."
+      ]
+    }
+  ]
+}
